@@ -1,0 +1,2 @@
+
+php artisan crud:generate Homepage --fields="image#string; title#string; description#text; order#integer" --view-path=admin --controller-namespace=Admin --route-group=admin

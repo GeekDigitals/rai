@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: myriadpro-regular;
+    font-size: 14px;
+    color: #414042;
+}
+:focus {
+    outline: none;
+}
+
+/*=== Fonts ===*/
+b, strong {
+    font-weight: normal;
+    font-family: myriadpro-bold;
+}
+
+/*=== Height & Width ===*/
+.onepageheight {
+    min-height: 100vh;
+}
+.halfpageheight {
+    min-height: 50vh;
+}
+
+
+/*=== Forms ===*/
+textarea {
+    resize: none;
+    box-shadow: none !important;
+}
+.btn, a ,i {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    text-decoration: none;
+    
+}
+.btn:focus , a:focus, .btn:hover , a:hover {
+    outline: none;
+    text-decoration: none;
+}
+.form-control:focus , .form-control:hover {
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+/*=== Button Styling ===*/
+.btn-pink {
+    background: #E21A54;
+    color: white;
+    text-transform: none;
+    padding: 6px 25px;
+    font-family: myriadpro-bold;
+}
+.btn-pink i {
+    width: 20px;
+    margin-right: 5px;
+}
+.btn-pink:hover, .btn-pink:focus {
+    background: #B81E43;
+    color: white;
+}
+
+.btn-white {
+    background: white;
+    color: #E21A54;
+    text-transform: none;
+    padding: 6px 25px;
+    font-family: myriadpro-bold;
+}
+.btn-white i {
+    width: 20px;
+    margin-right: 5px;
+}
+.btn-white:hover, .btn-white:focus {
+    background: #B81E43;
+    color: white;
+}
+
+/*=== Scroll ===*/
+::-webkit-scrollbar-track {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2A2A2A;
+    border-radius: 5px;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}

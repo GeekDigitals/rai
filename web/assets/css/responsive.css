@@ -1,0 +1,35 @@
+@media (max-width: 1200px) {
+    #slides img {
+        height: 100% !important;
+        width: auto !important;
+        left: !important;
+        top: 0 !important;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-nav li a {
+        margin-left: 25px;
+    }
+}
+@media (max-width: 767px) {
+    .navbar {
+        background: white !Important;
+    }
+    
+    .slides-pagination {
+        margin-left: 15px;
+    }
+    .bounce-btn {
+        bottom: 100px;
+        right: calc(50% - 28px);
+        right: -webkit-calc(50% - 28px);
+        right: -moz-calc(50% - 28px);
+        right: -o-calc(50% - 28px);
+    }
+    #about .img, #about .text {
+        margin-bottom: 50px;
+    }
+    #contact .items {
+        margin-bottom: 30px;    
+    }
+}

@@ -1,0 +1,420 @@
+/*=== Reuseable CSS ===*/
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.1);
+}
+.height100 {
+    height: 100%;
+}
+.width100 {
+    width: 100%;
+}
+.diagonal {
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+    background: #E21A54;
+    transform: skew(0deg,10deg);
+    -ms-transform: skew(0deg,10deg);
+    -webkit-transform: skew(0deg,5deg);
+}
+.diagonal .wrapper {
+    display: block;
+    float: left;
+    margin: 100px auto;
+    width: 100%;
+    transform: skew(0deg,-5deg);
+    -ms-transform: skew(0deg,-10deg);
+    -webkit-transform: skew(0deg,-5deg); 
+}
+
+/*--- Form ---*/
+.form-group label {
+    color: #ccc;
+}
+.form-control {
+    font-family: myriadpro-regular;
+    font-size: 14px;
+}
+.uploadphoto {
+    text-align: center;
+}
+.uploadphoto input[type=file] {
+    outline: 0;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    display: none;
+}
+.uploadphoto label {
+    margin: 15px 0;
+}
+.uploadphoto .label {
+    width: 100%;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    display: block;
+    padding: 1.2em;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    color: #ccc;
+    font-weight: normal;
+}
+.uploadphoto .label i {
+    display: block;
+    font-size: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+     transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.uploadphoto .label i,
+uploadphoto .label .title {
+    color: #ccc;
+    transition: 200ms color;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.uploadphoto .label:hover {
+    border: 2px solid black;
+}
+.uploadphoto .label:hover i,
+.uploadphoto .label:hover .title {
+    color: black;
+}
+
+/*--- Padding ---*/
+
+
+/*--- Border ---*/
+.bordertop-grey {
+    border-top: 1px solid #eee;
+}
+.borderbot-grey {
+    border-bottom: 1px solid #eee;
+}
+.separator {
+    height: 3px;
+    width: 50px;
+    background: #D71C51;
+    margin: 15px auto 0;
+}
+
+/*--- Color ---*/
+.color-light {
+    color: #E21A54;
+}
+.color-medium {
+    color: #D71C51;
+}
+.color-dark {
+    color: #B81E43;
+}
+.color-white {
+    color: #fff;
+}
+
+/*--- Background ---*/
+.background-light {
+    background: #E21A54;
+}
+.background-medium {
+    background: #D71C51;
+}
+.background-dark {
+    background: #B81E43;
+}
+
+/*=== Navigation ===*/
+.navbar {
+    background: transparent;
+    transition: all 0.3s;
+}
+.affix {
+    background: white;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(226, 26, 84, 0.5);
+    font-family: myriadpro-bold;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(215, 28, 81, 0.7);
+}
+.navbar-light .navbar-nav .open > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.active {
+    color: #B81E43;
+}
+
+/*=== Home ===*/
+/*--- Slider ---*/
+#slides {
+    height: 100vh !important;
+}
+#slides img {
+    height: auto !important;
+    width: 100% !important;
+    left: 0 !important;
+    top: calc(0% - 5%) !important;
+}
+.slides-pagination {
+    position: absolute;
+    z-index: 3;
+    bottom: 25px;
+    text-align: left;
+    margin-left: 50px;
+    width: 100%;
+}
+.slides-navigation a {
+    color: #D71C51;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: white;
+    padding: 4px;
+}
+.slides-navigation a.prev {
+    border-radius: 0 10px 10px 0;
+    transform: translateX(-40px);
+}
+.slides-navigation a.next {
+    border-radius: 10px 0 0 10px;
+    transform: translateX(40px);
+}
+#slides:hover .slides-navigation a {
+    transform: translateX(0);
+}
+
+/*--- Bounce Button ---*/
+@-webkit-keyframes bounce {
+    0% {
+        transform: scale(1,1) translate(0px, 0px);
+    }
+
+    30%{
+        transform: scale(1,1) translate(0px, 10px); 
+    }
+
+    75%{
+        transform: scale(1,1) translate(0px, 19px); 
+    }
+
+    100% {
+        transform: scale(1,1) translate(0px, 0px);
+    }
+}
+
+.bounce-btn {
+    position: absolute;
+    z-index: 2;
+    bottom: 30px;
+    padding: 15px;  
+    background:transparent;
+    -webkit-animation: bounce 0.75s infinite;
+    right: 100px;
+    color: white;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+/*=== About Us ===*/
+#about {
+    padding: 100px 0 0;
+}
+#about .img {
+    max-height: 500px;
+    overflow: hidden;
+}
+#about .img img {
+    padding: 0 50px;
+}
+#about ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+#about li {
+    text-indent: -20px;
+}
+#about li:before {
+    content: "•";
+    color: #D71C51;
+    margin-right: 15px;
+    font-size: 20px;
+}
+#about .title {
+    color: #D71C51;
+}
+
+/*=== Products ===*/
+#products {
+    margin-bottom: 5px;
+}
+
+/*=== Contact Us ===*/
+#contact {
+    padding: 55px 0 0;
+}
+#contact .separator h4:before {
+    content: "asdf";
+}
+#contact .text p , #contact .text a {
+    color: #ccc;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+#contact .text a:hover, #contact .text a:focus, #contact .text p:hover, #contact .text p:focus {
+    color: #D71C51;
+}
+.socialmedia .list-inline-item:not(:last-child) {
+    margin-right: 10px;
+}
+.socialmedia a {
+    color: #ccc;
+    font-size: 24px;
+}
+.socialmedia a:hover, .socialmedia a:focus {
+    color: #D71C51;
+}
+
+/*=== Footer ===*/
+footer p{
+    background-image: -webkit-linear-gradient(left, #E21A54, #D71C51, #B81E43); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #E21A54, #D71C51, #B81E43); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #E21A54, #D71C51, #B81E43); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #E21A54, #D71C51, #B81E43); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #E21A54, #D71C51, #B81E43); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: myriadpro-bold;
+}
+
+/*=== START FAQ Button ===*/
+#faq-btn {
+    opacity: 1; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 40px; /* Place the button at the bottom of the page */
+    right: 20px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #E21A54; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+}
+
+#faq-btn:hover {
+    background-color: #B81E43;
+    box-shadow: 0px 0px 11px rgba(0,0,0,0.1);
+}
+
+/*=== Back to Top ===*/
+#backtop {
+    opacity: 0; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 100px; /* Place the button at the bottom of the page */
+    right: 20px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #E21A54; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+#backtop:hover {
+    background-color: #B81E43;
+    box-shadow: 0px 0px 11px rgba(0,0,0,0.1);
+}
+
+/*=== Modal ===*/
+/*--- FAQ Popup ---*/
+.modal {
+    background: rgba(255,255,255,0.9);
+}
+.modal .modal-content {
+    background: transparent;
+    border: none;
+}
+.modal .modal-header {
+    border: none;
+}
+.modal .close {
+    color: #E21A54;
+}
+.modal .card {
+    background-image: -webkit-linear-gradient(left, #E21A54, #D71C51, #B81E43); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #E21A54, #D71C51, #B81E43); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #E21A54, #D71C51, #B81E43); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #E21A54, #D71C51, #B81E43); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #E21A54, #D71C51, #B81E43); /* Standard syntax; must be last */
+    margin-bottom: 5px;
+}
+.modal .card-header {
+    background: transparent;
+    border: none;
+}
+.modal .card-header a.collapsed {
+    color: #ccc;
+}
+.modal .card-header a {
+    color: #fff;
+}
+.modal .card-header a:before {
+    content: "\f106";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    float: right;
+}
+.modal .card-header a.collapsed:before {
+    content: "\f107";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.modal .card-header a:hover, .modal .card-header a:focus {
+    color: #fff;
+}
+.modal .card-block {
+    color: #fff;
+}
